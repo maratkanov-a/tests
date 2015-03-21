@@ -1,0 +1,16 @@
+<table class="table table-hover" data-height="400" data-row-style="rowStyle">
+    <thead>
+    <tr>
+        <th class="col-md-4">Тест</th>
+        <th class="col-md-6">Пользователь</th>
+        <th class="col-md-2">Неправильных ответов</th>
+    </tr>
+{% for result in object_list %}
+    <tr class="active">
+        <td class="col-md-2">{{ result.test_name }}</td>
+        <td class="col-md-4">{{ result.which_user }}</td>
+        <td class="col-md-4">{{ result.result }}</td>
+    </tr>
+{% endfor %}
+</thead>
+</table>

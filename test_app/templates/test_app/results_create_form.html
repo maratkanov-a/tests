@@ -1,0 +1,6 @@
+<form class="js-form-result-create">{% csrf_token %}
+    <ul class="list-group js-to-hide">
+            <li class="list-group-item js-add-which-user">{{ form.which_user }}</li>
+            <li class="list-group-item js-add-result">{{ form.result }}</li>
+        </ul>
+</form>

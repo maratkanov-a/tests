@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Тесты</title>
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../static/font-awesome-4.3.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<nav class="navbar navbar-inverse" style="margin-bottom: 0px;">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a class="js-go-home" href="/">Домой</a></li>
+                {% if user.is_superuser %}
+                    <li><a class="js-registration" href="regme//">Регистрация</a>
+                    </li>
+                {% endif %}
+                <li><a class="js-go-create-question" href="create_question/">Создать вопрос</a>
+                </li>
+                <li><a class="js-go-create-theme" href="create_theme/">Создать тему</a>
+                </li>
+                {% if not user.is_authenticated %}
+                    <li><a class="js-go-login" href="login/">Войти</a>
+                    </li>
+                {% endif %}
+                <li><a href="logout/">Выйти</a>
+                </li>
+                <li><a class="active" href="#">{{ user.username }}</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="col-md-12">
+        <div class="jumbotron col-md-8 col-md-offset-2">
+        <div class="js-to-hide">
+            <button style="text-align: center; margin-bottom: 20px;" class="btn btn-default js-show-results">Результаты</button>
+        </div>
+            {% for elem in object_list %}
+                <ul class="list-group js-to-hide">
+                    <li class="list-group-item"><a class="js-go-to-theme" data-id="{{ elem.id }}"
+                                                   href="test/{{ elem.id }}/">{{ elem }}</a>
+                        {% if user.is_superuser %}
+                            <button style="float: right;" class=" js-delete-element" data-id="{{ elem.id }}">
+                                <i class="fa fa-close"></i>
+                            </button>
+                            <button style="float: right;" class="js-change-element" data-id="{{ elem.id }}">
+                                <i class="fa fa-pencil"></i>
+                            </button>
+                        {% endif %}
+                        {% csrf_token %}
+                    </li>
+                </ul>
+            {% endfor %}
+            <div class="js-get-template"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../static/js/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="../../static/js/main.js"></script>
+
+<script type="text/javascript" src="../../static/js/bootstrap.min.js"></script>
+</html>

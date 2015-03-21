@@ -1,0 +1,7 @@
+<form class="js-form-theme-change" method="post"> {% csrf_token %}
+    <ul class="list-group">
+        <li class="list-group-item">Название вопроса   {{ form.name }}</li>
+        <li class="list-group-item">Ответ  {{ form.what_question }}</li>
+    </ul>
+    <input class="btn btn-default js-theme-change" data-id="{{ object.id }}" type="submit" value="Изменить">
+</form>

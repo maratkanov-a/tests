@@ -1,0 +1,17 @@
+<form action=""> {% csrf_token %}
+    {% for questions in object.what_question.all %}
+        <ul class="list-group js-to-hide">
+            <li class="list-group-item">{{ questions }}</li>
+            <li class="list-group-item">
+                <label>
+                    <input type="radio" name="{{ questions.id }}"/>да
+                </label>
+                <label>
+                    <input type="radio" name="{{ questions.id }}"/>нет
+                </label></li>
+            <li style="display: none" class="list-group-item js-right-answer">{{ questions.what_question }}</li>
+        </ul>
+    {% endfor %}
+    <div class="js-create-result" data-user="{{ user.id }}" data-testname="{{ object.name }}"></div>
+    <input class="btn btn-default js-answer" type="submit" value="отправить"/>
+</form>

@@ -1,0 +1,162 @@
+html, body  {
+    color: white;
+    height: 100%;
+    background-color: #1f262e ;
+}
+
+
+.js-welcome {
+    min-height: 100%;
+    text-align: center;
+}
+
+.js-graphics {
+    color: #000000;
+    min-height: 100%;
+}
+
+.white{
+    background-color: white;
+}
+
+.js-page-name{
+    display: inline-block;
+    padding: 5% 0 2% 0;
+    margin: 0 0 5% 0;
+    border-bottom: 3px solid #00b867;
+    float: none;
+}
+
+.js-table {
+    min-height: 100%;
+}
+
+.title{
+    margin: 0;
+    padding: 15% 0 5% 0;
+}
+
+.js-to-nextpage{
+    margin: 20% 0 5% 0;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+.green-top {
+    border-top: 4px solid #00b867;
+}
+
+.all-site{
+    height: 100%;
+}
+
+.js-button-to-nextpage{
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    background: none;
+    border: 3px solid #00b867;
+    color: #00b867;
+
+}
+.footer{ /* TODO: центроровать текст по вертикали, залезает на таблицу при уменьшении окна*/
+    background-color: #00b867;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 2% 0;
+}
+
+.open-source-table{
+    margin: 0;
+}
+
+.js-table-head{
+    color: #00b867;
+}
+
+.js-table-body{
+    border-top: solid #00b867;
+}
+
+td,th {
+    border-top: none;
+    border-right: 1px solid white;
+
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+    border-top: none;
+}
+
+.headerSortUp:after{
+    font-family: 'FontAwesome';
+    content: "\f0de";
+    float: right;
+}
+.headerSortDown:after{
+    font-family: 'FontAwesome';
+    content: "\f0dd";
+    float: right;
+}
+.header:after{
+    font-family: 'FontAwesome';
+    content: "\f0dc";
+    float: right;
+}
+
+#diagramCarousel {
+    padding: 0 10% 10% 10%;
+}
+
+.carousel-indicators li {
+  border-color:#999;
+  background-color:#ccc;
+}
+
+.carousel-button-left, .carousel-button-right {
+    padding-top: 0.7%;
+    margin-top: 20%;
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    background: none;
+    border: 3px solid #00b867;
+    color: #00b867;
+}
+
+.carousel-control.right {
+    background-image: none;
+}
+.carousel-control.left {
+    padding-right: 0.4%;
+    background-image: none;
+}
+
+.carousel-button-left{
+    margin-right: 10%;
+}
+
+.carousel-button-right{
+    margin-left: 10%;
+}
+
+
+.wrapper-footer {
+    margin-top: 10%;
+}
+
+.buttons-to-download{
+    color: #00b867;
+    display: inline-block;
+    right: 0;
+}
+
+#d3Chart {
+    width: auto;
+    margin-left: 20%;
+}
